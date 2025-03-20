@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoescola</title>
+    <script src="arquivo_script.js"></script>
+</head>
+<body>
+    <h1>Autoescola - Inscrição</h1>
+    <p>Informe sua idade abaixo para verificarmos sua elegibilidade.</p>
+    <label for="id_idade"> Idade:
+        <input type="number" id="id_idade">
+    </label>
+    <input type="button" value="Verificar" onclick="verificar()">
+    <p id="result"></p>
+
+    <script>
+        let verificar = function(){
+            let idade = Number(window.document.getElementById("id_idade").value);
+            
+            let result = window.document.getElementById("result");
+            // console.log(idade);
+            if(idade>=18 && idade < 100){
+                result.innerHTML = "Apto para início";
+
+                let renovacao = "Você fará a renovação da habilitação a cada ";
+
+                if(idade<50){
+                    renovacao += "<strong>10 anos</strong>";
+                }else if(idade>=50 && idade <=69){
+                    renovacao += "<strong>5 anos</strong>";
+                }else if(idade>70){
+                    renovacao += "<strong>3 anos</strong>";
+                }
+                
+                result.innerHTML += "<br>"+renovacao;
+                
+            }else{
+                result.innerHTML = "Inapto para início";
+            }
+
+
+            /*
+            Renovação da CNH 
+                10 anos com menos de 50 anos
+                5 anos com idade entre 50 e 69 anos
+                3 anos com 70 anos ou mais
+            */
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+#formulario, fieldset{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+label{
+    margin: 10px;
+}
+.numeros, .botoes{
+    width: 200px;
+}

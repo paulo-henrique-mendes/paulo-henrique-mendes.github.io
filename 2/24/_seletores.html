@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula - getElements</title>
+</head>
+<body>
+    <h3>getElements</h3>
+    <!-- 
+        Lista de elementos com a mesma classe e separados por sexo
+
+    -->
+    <ol>
+        <li class="nomes" name="m">João</li>
+        <li class="nomes" name="f">Maria</li>
+        <li class="nomes" name="f">Raimunda</li>
+        <li class="nomes" name="m">Pedro</li>
+    </ol>
+    <input type="button" value="Limpar nomes" id="botao">
+
+    <script>
+        let botao = document.querySelector("#botao");
+        botao.addEventListener("click", limpar);
+
+        function limpar(){
+            // let $lista_nomes = document.getElementsByTagName("li"); // captura todas as tags
+            let $lista_nomes = document.getElementsByClassName("nomes"); //captura por classe
+            // let $lista_nomes = document.getElementsByName("m"); //captura por name
+            // let $lista_nomes = document.querySelector("li"); //captura o primeiro encontrado
+            // let $lista_nomes = document.querySelectorAll("li"); //captura todas as tags
+            // let $lista_nomes = document.querySelectorAll(".nomes"); //Captura todas as classes
+            
+            console.log($lista_nomes);
+            // $lista_nomes.innerText = "";
+
+            for(let i = 0; i<$lista_nomes.length; i++){
+                $lista_nomes[i].innerText = "";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM + JS</title>
+</head>
+<body>
+    <div>
+        <h2>Ímpar ou par?</h2>
+        <!--Label é um elemento que identifica e rotula campos-->
+        <label for="id_numero">
+            Número: 
+            <!--INPUT de tipo NUMBER é uma tag que permite que o usuário insira dados numéricos-->
+            <input type="number" id="id_numero"/>
+        </label>
+        <br>
+        <!---->
+        <input type="button" value="Verificar" onclick="verificar()"/>
+        <p id="id_resultado"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

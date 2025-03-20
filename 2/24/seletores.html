@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de seletores</title>
+</head>
+<body>
+    <h1>FEC</h1>
+    <ol>
+        <li 
+            class="jogador"
+            name="mario"
+            id="id_marinho"
+        >
+        Marinho
+        </li>
+
+        <li 
+            class="jogador"
+            name="juan"
+            id="id_lucero"
+        >
+        Juan Lucero
+        </li>
+
+
+        <li 
+            class="jogador"
+            name="juan"
+            id="id_lucero"
+        >
+        Juan Vojvoda
+        </li>
+
+        <li 
+            class="jogador"
+            name="joao_ricado"
+            id="id_joao"
+        >
+        João Ricardo
+        </li>
+
+        <li 
+            class="jogador"
+            name="david_luiz"
+            id="id_david"
+        >
+        David Luiz
+        </li>
+
+
+        <li 
+            class="jogador"
+            name="david_luiz"
+            id="id_brittz"
+        >
+        Brittz
+        </li>
+
+        <li 
+            class="jogador"
+            name="bruno_pacheco"
+            id="id_pacheco"
+        >
+        Bruno Pacheco
+        </li>
+        
+        <li 
+            class="jogador"
+            name="moises"
+            id="id_moises"
+        >
+        Moisés
+        </li>
+
+
+        <li 
+            class="jogador"
+            name="yago_pikachu"
+            id="id_pikachu"
+        >
+        Yago Picachu
+        </li>
+
+
+        <li 
+            class="jogador"
+            name="yago_pikachu"
+            id="id_pikachu"
+        >
+        Breno Lopes
+        </li>
+        
+    </ol>
+
+    <button onclick="limpar()">Limpar</button>
+
+    <script>
+        let limpar = ()=> {
+            // let jogador = window.document.getElementById("id_marinho");
+            // jogador.innerHTML = "";
+
+            // let jogadores = document.querySelectorAll(".jogador"); // Captura todos do seletor indicado
+            let jogadores = document.getElementsByName("juan")
+            console.log(jogadores);
+
+            for(let i = 0; i < jogadores.length; i++){
+                jogadores[i].innerHTML = "";
+            }
+        }
+    </script>
+    
+</body>
+</html>
